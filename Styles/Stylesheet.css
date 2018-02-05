@@ -43,6 +43,14 @@ body p{
     margin: 20px 10px;
     padding: 10px;
     border: 2px solid #E3E3E3;
+    position: relative;   
+}
+
+#insidebar{
+    position: absolute;
+    height: 20%;
+    bottom: 0;
+    
 }
 
 footer{
@@ -53,19 +61,19 @@ footer{
     border: 3px solid #E3E3E3;
     text-align: center;
     color: black;
-    text-shadow: 0.1em 0.1em white;
+    /*text-shadow: 0.1em 0.1em white;*/
     /*background-image: url(../Images/bar_background.png);*/
-        background-color: rgb(225, 206, 0);
+    background-color: rgb(255, 206, 0);
 }
 
 #navigation{
-    height: 60px;
+    height: 45px;
     border: 3px solid #E3E3E3;
     margin-top: 20px;
-    text-shadow: 0.1em 0.1em #333;
+    /*text-shadow: 0.1em 0.1em #333;*/
     /*background-image: url(../Images/bar_background.png);*/
-        background-color: rgb(225, 206, 0);
-        text-align: center;
+    background-color: rgb(255, 206, 0);
+    text-align: center;
 }
 
 #nav{
@@ -91,7 +99,7 @@ footer{
 
 #nav a:link, nav a:active, nav a:visited{
     display: block;
-    color: #fff;
+    color: black;
     text-decoration: none;
 }
 

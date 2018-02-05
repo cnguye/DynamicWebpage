@@ -4,7 +4,7 @@
         <title><?php echo $title; ?></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="Styles/Stylesheet.css" />
     </head>
     <body>
@@ -31,7 +31,14 @@
             </div>
 
             <div id="sidebar">
-
+                <div id="insidebar">
+                    <form class="form-inline my-2 my-lg-0" id="form">
+                        <input class="form-control mr-sm-2" type="attach" placeholder="attach file" aria-label="attach">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Attach</button>
+                         &nbsp;
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Send</button>
+                    </form>
+                </div>
             </div>
 
             <footer>
