@@ -16,6 +16,11 @@ body p{
     border: 5px solid #dedede;
 }
 
+#announcements{
+    height: 20px;
+    text-algin: center;
+}
+
 #banner{
     background-image: url(../Images/banner_1.jpg);
     background-repeat: no-repeat;
