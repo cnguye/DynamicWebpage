@@ -5,6 +5,7 @@ $content = '<img src="Images/coffee1.png" class="imgLeft" />
 <h3> Lorem Ipsum </h3>
 
 <p>
+    <i class="fab fa-android fa-lg"></i>
     Lorem ipsum dolor sit amet, feugait theophrastus ex per. Ea 
     insolens indoctum vituperatoribus per. Tantas consequat id est, 
     sea placerat pertinax erroribus id. Ei quando tantas molestiae 
