@@ -35,9 +35,30 @@
                     <form class="form-inline my-2 my-lg-0" id="form">
                         <input class="form-control mr-sm-2" type="attach" placeholder="attach file" aria-label="attach">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Attach</button>
-                         &nbsp;
+                        &nbsp;
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Send</button>
                     </form>
+                </div>
+
+                <div>
+
+                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                        First Name: <input type="text" name="fname">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">submit</button>
+                    </form>
+
+                    <?php
+                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                        // collect value of input field
+                        $name = htmlspecialchars($_REQUEST['fname']);
+                        if (empty($name)) {
+                            print "Name is empty";
+                        } else {
+                            echo $name;
+                        }
+                    }
+                    ?>
+
                 </div>
             </div>
 
