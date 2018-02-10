@@ -43,16 +43,25 @@
                 <div>
 
                     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                        First Name: <input type="text" name="fname">
+                        First Name: <input type="text" name="fname"><br>
+
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">submit here</button>
+                    </form>
+                    
+                    <form method="post" action="test_get.php">
+                             First Name: <input type="text" name="fname"><br>
+
+                        Last Name: <input type="text" name="lname"><br>
+                        E-mail: <input type="text" name="email"><br>
+                        
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">submit</button>
                     </form>
-
                     <?php
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         // collect value of input field
-                        $name = htmlspecialchars($_REQUEST['fname']);
+                        $name = $_POST['fname'];
                         if (empty($name)) {
-                            print "Name is empty";
+                            print "Please specify a name";
                         } else {
                             echo $name;
                         }
