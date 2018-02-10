@@ -1,3 +1,5 @@
+<?php ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -41,32 +43,37 @@
                 </div>
 
                 <div>
+<!--                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 
-                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                        First Name: <input type="text" name="fname"><br>
 
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">submit here</button>
-                    </form>
-                    
+                    </form>-->
+
                     <form method="post" action="test_get.php">
-                             First Name: <input type="text" name="fname"><br>
-
+                        First Name: <input type="text" name="fname"><br>
                         Last Name: <input type="text" name="lname"><br>
                         E-mail: <input type="text" name="email"><br>
-                        
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">submit</button>
-                    </form>
-                    <?php
-                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                        // collect value of input field
-                        $name = $_POST['fname'];
-                        if (empty($name)) {
-                            print "Please specify a name";
-                        } else {
-                            echo $name;
+
+                        <button name="button_1" class="btn btn-outline-success my-2 my-sm-0" type="submit">submit here</button>
+                        <button action="test_get.php" name="button_2" class="btn btn-outline-success my-2 my-sm-0" type="submit">submit</button>
+
+                        <?php
+                        if (filter_input(INPUT_POST, 'button_1') !== null) {
+                            // collect value of input field
+                            $name = filter_input(INPUT_POST, 'fname');
+                            if (empty($name)) {
+                                print "Please specify a name";
+                            } else {
+
+                                echo nl2br("\n $name");
+                            }
+                        } else if (filter_input(INPUT_POST, 'button_2') !== null) {
+                            print '<script language="Javascript">document.location.href="test_get.php";</script>';
+//                            header("Location: test_get.php");
+                            exit;
                         }
-                    }
-                    ?>
+                        ?>
+                    </form>
+
 
                 </div>
             </div>
