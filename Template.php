@@ -30,6 +30,8 @@
 
             <div id="content_area">
                 <?php echo $content; ?>
+
+
             </div>
 
             <div id="sidebar">
@@ -43,18 +45,13 @@
                 </div>
 
                 <div>
-<!--                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-
-
-                    </form>-->
-
-                    <form method="post" action="test_get.php">
-                        First Name: <input type="text" name="fname"><br>
+                    <form method="post">
+                        First Name: <input type="text" name="fname" ><br>
                         Last Name: <input type="text" name="lname"><br>
                         E-mail: <input type="text" name="email"><br>
 
                         <button name="button_1" class="btn btn-outline-success my-2 my-sm-0" type="submit">submit here</button>
-                        <button action="test_get.php" name="button_2" class="btn btn-outline-success my-2 my-sm-0" type="submit">submit</button>
+                        <button name="button_2" class="btn btn-outline-success my-2 my-sm-0" type="submit" formaction="test_get.php">submit</button>
 
                         <?php
                         if (filter_input(INPUT_POST, 'button_1') !== null) {
@@ -63,18 +60,11 @@
                             if (empty($name)) {
                                 print "Please specify a name";
                             } else {
-
                                 echo nl2br("\n $name");
                             }
-                        } else if (filter_input(INPUT_POST, 'button_2') !== null) {
-                            print '<script language="Javascript">document.location.href="test_get.php";</script>';
-//                            header("Location: test_get.php");
-                            exit;
                         }
                         ?>
                     </form>
-
-
                 </div>
             </div>
 
