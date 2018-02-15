@@ -3,8 +3,8 @@
 
         Welcome <?php
         $fname = filter_input(INPUT_POST, "fname");
-
         $lname = filter_input(INPUT_POST, "lname");
+
         print($fname . " " . $lname);
         ?>
         !
