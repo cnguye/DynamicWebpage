@@ -1,39 +1,60 @@
 <?php
+
 $title = "Home";
 $content = '<img src="Images/coffee1.png" class="imgLeft" />
 
 <h3> Contact Me </h3>
 
-<p>
-    Lorem ipsum dolor sit amet, feugait theophrastus ex per. Ea 
-    insolens indoctum vituperatoribus per. Tantas consequat id est, 
-    sea placerat pertinax erroribus id. Ei quando tantas molestiae 
-    mea, cum ne omnis officiis consequat.
-    
-<p>
-    Rebum summo at nec, vis ridens perpetua cu, sit integre mentitum 
-    suscipiantur te. Id usu salutandi instructior conclusionemque, ne 
-    dolore latine ius, graeco doctus est te. Ut vis scribentur 
-    instructior, nam ad euismod elaboraret accommodare, ea sumo eius 
-    constituam eam. Id duo aliquid albucius reformidans. Quo graeci 
-    fabulas legimus cu, ferri possit cotidieque ut per, ea consequat 
-    eloquentiam cum. His delicata consectetuer ea, ut mea iriure aperiri 
-    disputationi, ad sit antiopam adolescens. No accumsan voluptatibus quo.
-    </p>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>
+                    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">First Name</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Last Name</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
 
-</p>
-<img src="Images/coffee2.png" class="imgRight" />
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Website</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
 
-<h3> Lorem Ipsum </h3>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Comments</span>
+                        </div>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
 
-<p>
-    Mei ut civibus explicari, vis dicta facete te, eos brute novum te. 
-    Ea vel incorrupte disputationi. His habeo illud simul ea, ancillae 
-    menandri no mea, graecis probatus vel at. Cum malis augue tamquam 
-    at. Ad sensibus dissentiunt vix, vel iuvaret conceptam ut, falli 
-    nulla oblique cu eum. Eros sale cum te, et ius inimicus expetenda 
-    dissentiunt.
-</p>
+                    <div class="input-group ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Gender</span>
+                        </div>
+                        &nbsp;
+                        <div class="form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="radioGender" value="male"> Male                            
+                        </div>
+                        <div class="form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="radioGender" value="female"> Female
+                        </div>
+
+                    </div>
+                <div class="float-md-right ">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="btn_contactMe">Submit</button>
+                </div>
+                </form>
 
 ';
 
