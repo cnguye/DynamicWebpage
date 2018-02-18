@@ -5,59 +5,82 @@ $content = '<img src="Images/coffee1.png" class="imgLeft" />
 
 <h3> Contact Me </h3>
 
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>
+<?php include "test_input.php" ?>
+                <form class="needs-validation" novalidate>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom01">First name</label>
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="First name" required>
+                            <div class="invalid-feedback">
+                                Please provide a first name.
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom02">Last name</label>
+                            <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid last name.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class=" mb-3">
+                            <label for="validationCustomUsername">Email</label>
+                            <div class="input-group">
 
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">First Name</span>
+                                <input type="text" class="form-control" id="validationCustomUsername" placeholder="Email" aria-describedby="inputGroupPrepend" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid Email.
+                                </div>
+                            </div>
                         </div>
-                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="fname">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Last Name</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="lname">
                     </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom03">Comment</label>
+                            <input type="text" class="form-control" id="validationCustom03" placeholder="Comment" required>
+                            <div class="invalid-feedback">
+                                Please leave a comment regarding your concern.
+                            </div>
                         </div>
-                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="email">
                     </div>
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Website</span>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
                         </div>
-                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" name="website">
                     </div>
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Comments</span>
-                        </div>
-                        <textarea class="form-control" aria-label="With textarea" name="comment"></textarea>
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Gender</span>
-                        </div>
-                        &nbsp;
-                        <div class="form-check-inline">
-                            <input class="form-check-input" type="radio" id="radioGender" value="male" name="gender"> Male                            
-                        </div>
-                        <div class="form-check-inline">
-                            <input class="form-check-input" type="radio" id="radioGender" value="female" name="gender"> Female
-                        </div>
-
-                    </div>
-                    <div class="float-md-right ">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="btn_contactMe">Submit</button>
-                    </div>
+                    <button class="btn btn-primary" type="submit">Submit form</button>
                 </form>
 
+                <script>
+                    // Example starter JavaScript for disabling form submissions if there are invalid fields
+                    (function () {
+                        "use strict";
+                        window.addEventListener("load", function () {
+                            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                            var forms = document.getElementsByClassName("needs-validation");
+                            // Loop over them and prevent submission
+                            var validation = Array.prototype.filter.call(forms, function (form) {
+                                form.addEventListener("submit", function (event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add("was-validated");
+                                }, false);
+                            });
+                        }, false);
+                    })();
+                </script>
 
 ';
+
 
 include "Template.php";
 include "test_input.php";

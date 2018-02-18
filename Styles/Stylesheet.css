@@ -36,6 +36,10 @@ body p{
     padding: 10px;
 }
 
+.error{
+    color: #FF0000;
+}
+
 #sidebar{
     float: right;
     width: 250px;
