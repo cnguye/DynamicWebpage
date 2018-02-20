@@ -1,12 +1,11 @@
 <?php
 
-$title = "Home";
-$content = '<img src="Images/coffee1.png" class="imgLeft" />
+$title = "Contact Me";
+$content = '
 
 <h3> Contact Me </h3>
-
-<?php include "test_input.php" ?>
-                <form class="needs-validation" novalidate>
+<?php include "test_input.php";?>
+               <form class="needs-validation" novalidate>
                     <div class="form-row">
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom01">First name</label>
@@ -27,7 +26,6 @@ $content = '<img src="Images/coffee1.png" class="imgLeft" />
                         <div class=" mb-3">
                             <label for="validationCustomUsername">Email</label>
                             <div class="input-group">
-
                                 <input type="text" class="form-control" id="validationCustomUsername" placeholder="Email" aria-describedby="inputGroupPrepend" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid Email.
@@ -83,6 +81,6 @@ $content = '<img src="Images/coffee1.png" class="imgLeft" />
 
 
 include "Template.php";
-include "test_input.php";
+//include "test_input.php";
 ?>
 

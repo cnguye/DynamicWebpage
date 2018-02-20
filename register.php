@@ -1,5 +1,5 @@
 <?php
-$title = "Home";
+$title = "Register";
 $content = '<img src="Images/coffee1.png" class="imgLeft" />
 
 <h3> Register </h3>
