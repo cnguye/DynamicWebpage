@@ -5,10 +5,10 @@ class CapsController {
     function CreateCapsDropdownList(){
         $capsModel = new CapsModel();
         $result = "<form action = '' method = 'post' width = '200px'>
-                Please select a type:
-                <select name = 'types'>
+                Filter by Position:
+                <select name = 'positions'>
                     <option value = '%' > All </option>
-                    ".$this->CreateOptionValues($capsModel->GetEmployeePositions()).
+                    ".$this->CreateOptionValues($capsModel->GetStaffPositions()).
                     "</select>
                     <input type = 'submit' value = 'Search' />
                     </form>";
@@ -28,7 +28,7 @@ class CapsController {
     
     function CreateCapsTables($positions){
         $capsModel = new CapsModel();
-        $positionArray = $capsModel->GetEmployeeByPosition($positions);
+        $positionArray = $capsModel->GetStaffByPosition($positions);
         $result = "";
         
         // Generate a capsTable for each capsEntity in array
@@ -36,7 +36,7 @@ class CapsController {
             $result = $result .
                     "<table class = 'capsTable'>
                         <tr>
-                            <th rowspan ='6' width = '150px'><img runat = 'server' src = '$caps->image' /></th>
+                            <th rowspan ='4' width = '150px'><img runat = 'server' src = '$caps->image' /></th>
                             <th width = '75px' >Name: </th>
                             <td>$caps->name</td>
                         </tr>
@@ -48,7 +48,7 @@ class CapsController {
                             <th>Contact: </th>
                             <td>$caps->number</td>
                         </tr>
-                        <tr>
+                        <tr id='desc'>
                             <th>Description: </th>
                             <td>$caps->description</td>
                         </tr>
