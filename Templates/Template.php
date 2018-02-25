@@ -23,6 +23,7 @@
                     <li><a href="contactMe.php">Contact Me</a></li>
                     <li><a href="register.php">Register</a></li>
                     <li><a href="about.php">About</a></li>
+                    <li><a href="manage.php">Manage</a></li>
                 </ul>
             </nav>
 

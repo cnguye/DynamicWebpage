@@ -1,13 +1,3 @@
-<?php
-
-//$title = "Contact Me";
-//$content = '<h3> Contact Me</h3>';
-//include "/Templates/Template.php";
-////include "test_input.php";
-
-require('Templates/templateTop.php');
-?>
-
 <form class="needs-validation" novalidate>
     <div class="form-row">
         <div class="col-md-4 mb-3">
@@ -79,8 +69,3 @@ require('Templates/templateTop.php');
         }, false);
     })();
 </script>
-
-<?php 
-require('Templates/templateBot.php');
-?>
-

@@ -95,7 +95,7 @@ footer{
     font-size: 24px;
     float: left;
     position: relative;
-    width: 25%;
+    width: 20%;
     margin: 0;
     padding:0;
     height: 50px;
@@ -145,4 +145,8 @@ footer{
     padding: 0px 10px 10px 10px;
     height: 150px;
     width: 150px;
+}
+
+.submitRight{
+    float:right;
 }

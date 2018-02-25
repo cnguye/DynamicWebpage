@@ -14,8 +14,11 @@ else{
 
 // Output page data
 $title = "About";
-$content = $capsController->CreateCapsDropdownList().$capsTables;
 
-include "Template.php";
+$content = $capsController->CreateCapsDropdownList().$capsTables . '<button name="btn_add_administrator" class="btn btn-outline-success my-2 my-sm-0" type="submit">Add Administrator</button>';
+
+include "/Templates/Template.php";
 ?>
+
+
 

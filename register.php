@@ -1,6 +1,6 @@
-<?php
-$title = "Register";
-$content = '<img src="Images/coffee1.png" class="imgLeft" />
+<?php include('Templates/templateTop.php'); ?>
+
+<img src="Images/coffee1.png" class="imgLeft" />
 
 <h3> Register </h3>
 
@@ -35,8 +35,8 @@ $content = '<img src="Images/coffee1.png" class="imgLeft" />
     dissentiunt.
 </p>
 
-';
 
-include "Template.php";
+<?php 
+include "/Templates/TemplateBot.php";
 ?>
 
